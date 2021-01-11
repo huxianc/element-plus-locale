@@ -1,0 +1,31 @@
+/* theme color */
+// $--color-primary: #1890ff;
+$--color-primary: #5291FF;
+$--color-success: #13ce66;
+$--color-warning: #ffba00;
+$--color-danger: #ff4949;
+// $--color-info: #1E1E1E;
+
+$--button-font-weight: 400;
+
+// $--color-text-regular: #1f2d3d;
+
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+
+$--table-border: 1px solid#dfe6ec;
+
+/* icon font path, required */
+$--font-path: '~element-plus/lib/theme-chalk/fonts';
+
+
+// 按需引入
+@import "~element-plus/packages/theme-chalk/src/date-picker";
+@import "~element-plus/packages/theme-chalk/src/scrollbar";
+@import "~element-plus/packages/theme-chalk/src/select";
+@import "~element-plus/packages/theme-chalk/src/switch";
+@import "~element-plus/packages/theme-chalk/src/table";
+@import "~element-plus/packages/theme-chalk/src/table-column";
+@import "~element-plus/packages/theme-chalk/src/time-select";
+@import "~element-plus/packages/theme-chalk/src/transfer";
+// @import "~element-plus/packages/theme-chalk/src/message";
