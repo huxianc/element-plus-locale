@@ -3,9 +3,27 @@
  * @Author: huxianc
  * @Date: 2021-01-11 11:24:17
  * @LastEditors: huxianc
- * @LastEditTime: 2021-01-11 11:51:06
+ * @LastEditTime: 2021-02-05 15:28:55
 -->
 <template>
+  <el-button type="primary" @click="show = true">111</el-button>
+  <el-button type="primary" @click="show2 = true">222</el-button>
+
+  <el-dialog title="123" v-model="show" width="30%">
+    <span></span>
+    <template #footer>
+      <el-button @click="show = false">Cancel</el-button>
+      <el-button type="primary" @click="show = false">OK</el-button>
+    </template>
+  </el-dialog>
+  <el-dialog title="123" v-model="show2" width="30%">
+    <span></span>
+    <template #footer>
+      <el-button @click="show2 = false">Cancel</el-button>
+      <el-button type="primary" @click="show2 = false">OK</el-button>
+    </template>
+  </el-dialog>
+
   <el-transfer v-model="value" :data="data" />
   <el-table :data="tableData" border stripe>
     <el-table-column
@@ -25,6 +43,14 @@
     background
   >
   </el-pagination>
+
+  <el-popconfirm :title="`确定删除该规则？`">
+    <template #reference>
+      <el-button type="danger" size="mini" style="margin-left: 10px"
+        >删除</el-button
+      >
+    </template>
+  </el-popconfirm>
 </template>
 
 <script>
@@ -44,6 +70,8 @@ export default {
       return data;
     };
     return {
+      show: false,
+      show2: false,
       data: generateData(),
       value: [],
       tableData: [],
@@ -60,7 +88,7 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$ELEMENT);
+    console.log(this);
   }
 };
 </script>

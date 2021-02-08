@@ -20,6 +20,8 @@ $--font-path: '~element-plus/lib/theme-chalk/fonts';
 
 
 // 按需引入
+@import "~element-plus/packages/theme-chalk/src/button";
+@import "~element-plus/packages/theme-chalk/src/dialog";
 @import "~element-plus/packages/theme-chalk/src/date-picker";
 @import "~element-plus/packages/theme-chalk/src/scrollbar";
 @import "~element-plus/packages/theme-chalk/src/select";
@@ -28,4 +30,5 @@ $--font-path: '~element-plus/lib/theme-chalk/fonts';
 @import "~element-plus/packages/theme-chalk/src/table-column";
 @import "~element-plus/packages/theme-chalk/src/time-select";
 @import "~element-plus/packages/theme-chalk/src/transfer";
+@import "~element-plus/packages/theme-chalk/src/popconfirm";
 // @import "~element-plus/packages/theme-chalk/src/message";
